@@ -15,8 +15,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Calc coverage
-        run: TESTRUN=true go test -v -covermode=count -coverprofile=coverage.out
-      - name: Convert coverage to lcov
+        run: TESTRUN=true go test -v ./... -covermode=count -coverprofile=coverage.out
+      - name: gcov2lcov-action
         uses: jandelgado/gcov2lcov-action@v1.0.8
       - shell: bash
         run: |
