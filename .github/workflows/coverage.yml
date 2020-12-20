@@ -17,9 +17,11 @@ jobs:
       - name: Calc coverage
         run: TESTRUN=true go test -v -covermode=count -coverprofile=coverage.out
       - name: Convert coverage to lcov
-        uses: jandelgado/gcov2lcov-action@v1.0.4
+        uses: jandelgado/gcov2lcov-action@v1.0.8
+        with:
+          version: v1.0.4
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
-          github-token: ${{ secrets.COVERALLS_GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: coverage.lcov
