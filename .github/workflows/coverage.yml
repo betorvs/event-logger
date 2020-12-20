@@ -18,9 +18,6 @@ jobs:
         run: TESTRUN=true go test -v ./... -covermode=count -coverprofile=coverage.out
       - name: gcov2lcov-action
         uses: jandelgado/gcov2lcov-action@v1.0.8
-      - shell: bash
-        run: |
-          cat coverage.out
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:

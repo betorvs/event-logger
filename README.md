@@ -13,7 +13,11 @@ export PORT=9090
 export APP_NAME=event-logger
 
 export LOG_LEVEL=INFO
+
+export USEPROMETHEUS=true
 ```
+
+TIP: Export `USEPROMETHEUS=true` to enable `/metrics` endpoint.
 
 ## Dependency Management
 The project is using [Go Modules](https://blog.golang.org/using-go-modules) for dependency management

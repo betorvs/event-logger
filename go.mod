@@ -3,6 +3,7 @@ module github.com/betorvs/event-logger
 go 1.15
 
 require (
+	github.com/jandelgado/gcov2lcov v1.0.4 // indirect
 	github.com/labstack/echo-contrib v0.9.0
 	github.com/labstack/echo/v4 v4.1.17
 	github.com/spf13/viper v1.7.1
